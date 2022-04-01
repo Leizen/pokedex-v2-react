@@ -4,9 +4,10 @@ const darkTheme ={
         text: "#FAFAFA",
         header_text: "#FAFAFA",
         header: "#371750",
-        about_background: "#462C5A",
-        border: "#FAFAFA",
-        hp_bar: "#00FF00"
+        page_background: "#462C5A",
+        about_background: "#371750",   
+        about_border: "#0B0510",
+        bar_background: "#FAFAFA"
     }
 };
 

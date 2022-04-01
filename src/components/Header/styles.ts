@@ -9,6 +9,7 @@ export const Container = styled.div`
     width: 100%;
 
     background: ${props => props.theme.colors.header};
+    border-bottom: 2px solid ${props => props.theme.colors.about_border};
 `
 
 export const Content = styled.div`
@@ -17,6 +18,9 @@ export const Content = styled.div`
     justify-content: space-between;
 
     width: 80%;
+    @media (max-width: 700px) { 
+        width: 90%;
+    }
 `
 
 export const Logo = styled.div`

@@ -7,8 +7,13 @@ export const Container = styled.div`
 
     height: 30rem;
     width: 100%;
+    padding: 4rem 0;
 
-    background: ${props => props.theme.colors.about_background};
+    @media (max-width: 700px) { 
+        margin-top: 2rem;
+        flex-direction: column;
+        height: 50rem;
+    }
 `
 
 export const Content = styled.div`
@@ -17,30 +22,57 @@ export const Content = styled.div`
     width: 50rem;
     height: 28rem;
 
-    border: 2px solid ${props => props.theme.colors.border};
+    border: 2px solid ${props => props.theme.colors.about_border};
+    background: ${props => props.theme.colors.about_background};
+
     border-radius: 0.5rem;
+
+    @media (max-width: 700px) { 
+        width: 80%;
+        flex-direction: column;
+        height: 100%;
+    }
+
 `
 export const Left = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 50%;
     height: 100%;
 
-    background: black;
+    border-right: 2px solid ${props => props.theme.colors.about_border};
+
+    img{
+        width: 20rem;
+    }
+
+    @media (max-width: 700px) { 
+        width: 100%;
+    }
 `
 
 export const Rigth = styled.div`
     width: 50%;
     height: 100%;
 
-    padding: 1rem 1rem;
+    @media (max-width: 700px) { 
+        width: 100%;
+    }
 `
 
 export const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
 
-    width: 100%;
-    height: 2rem;
+    height: 20%;
+
+    @media (max-width: 700px) { 
+        width: 90%;
+    }
 `
 
 export const Types = styled.div`
@@ -49,20 +81,8 @@ export const Types = styled.div`
     justify-content: center;
 
     width: 100%;
-    height: 6rem;
-`
-
-export const Type = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 4rem;
-    height: 2rem;
-    margin: 0 1rem;
-
-    background: green;
-    border-radius: 0.25rem;
+    height: 20%;
+    
 `
 export const Stats= styled.div`
     display: flex;
@@ -70,16 +90,20 @@ export const Stats= styled.div`
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 18rem;
+    height: 50%;
+    
+    @media (max-width: 700px) { 
+        margin-left: 1rem;
+    }
 `
 
 export const ProgressBar= styled.div`
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     width: 100%;
+    height: 100%;
 
-    margin-top: 1rem;
     p{
         width: 3rem;
     }
@@ -93,7 +117,7 @@ export const ProgressBar= styled.div`
         ::-webkit-progress-bar{
             height: 1rem;
             border-radius: 0.25rem;
-            background-color: #eee;
+            background-color: ${props => props.theme.colors.bar_background};
         }
         ::-webkit-progress-value{
             height: 1rem;

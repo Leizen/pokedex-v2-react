@@ -5,30 +5,27 @@ import {
   Rigth,
   Header,
   Types,
-  Type,
   Stats,
   ProgressBar,
 } from "./styles";
+import bulbaPng from "../../assets/bulba.png";
+import { Type } from "../Type";
 
 export function About() {
   return (
     <Container>
       <Content>
         <Left>
-          <h1>oi</h1>
+          <img src={bulbaPng} alt={`Imagem do pokemon Bulbasaur`} />
         </Left>
         <Rigth>
           <Header>
-            <h1>Bulbassauro</h1>
+            <h1>Bulbasaur</h1>
             <h1>#001</h1>
           </Header>
           <Types>
-            <Type>
-              <p>Grass</p>
-            </Type>
-            <Type>
-              <p>Poison</p>
-            </Type>
+            <Type type={"Grass"} />
+            <Type type={"Poison"} />
           </Types>
           <Stats>
             <ProgressBar color={"hp"}>

@@ -4,9 +4,10 @@ const lightTheme ={
         text: "#0B0510",
         header_text:"#FAFAFA",
         header: "#FF0000",
-        about_background: "#808080",
-        border: "#3B4CCA",
-        hp_bar: "#00FF00"
+        page_background: "#d1e5d9",
+        about_background: "#FCFCFC",
+        about_border: "#0B0510",
+        bar_background: "#CCC"
     }
 }
 
